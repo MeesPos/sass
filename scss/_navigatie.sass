@@ -1,0 +1,19 @@
+/* de navigatie */
+nav
+    background-color: $hoofdkleur
+    ul
+        list-style-type: none
+    
+    a
+        color: #fff
+        text-decoration: none
+        display: block
+        padding: $padding/2 $padding
+        &:hover
+            text-decoration: none
+    label
+        @extend a
+        text-align: right
+        
+@media screen and (min-width: 30em)
+    @import naviTablet
