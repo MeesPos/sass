@@ -1,7 +1,10 @@
-// declaren van kleuren
-$hoofdkleur : #47a;
-$lichter : lighten($hoofdkleur, 30%);
-$donkerder : darken($hoofdkleur, 10%);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-// Padding
-$padding: 1em;
+$hoofdkleur: #2859BC;
+$secundaire-kleur: #81D742;
+$secundaire-kleur-donker: darken($secundaire-kleur, 30);
+$hoofdkleur-lichter: #4F82FF;
+$contrast-kleur: #FF652A;
+$achtergrond-donkerder: #cccccc;
+
+$mijnFont: 'Roboto', sans-serif;

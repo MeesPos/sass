@@ -1,19 +1,46 @@
-/* de navigatie */
+Ik heb SASS ipv SCSS gebruikt om dit even voor mezelf nog goed aan te leren
+
 nav
-    background-color: $hoofdkleur
-    ul
-        list-style-type: none
-    
+    background-color: #ddd
+    position: absolute
     a
-        color: #fff
         text-decoration: none
         display: block
-        padding: $padding/2 $padding
-        &:hover
-            text-decoration: none
-    label
-        @extend a
-        text-align: right
-        
-@media screen and (min-width: 30em)
-    @import naviTablet
+        padding: .5em 5em .5em 2em 
+        border-bottom: 1px solid #fff
+        color: $secundaire-kleur-donker
+    a.actief
+        border-bottom: 4px solid $contrast-kleur
+
+// Container verplaatsen met checkbox
+
+#haal-menu:checked ~ .container
+    left: 10em
+
+#haal-menu:checked ~ .menu-halen .fa-times
+    display: inline-block
+
+#haal-menu:checked ~ .menu-halen .fa-bars
+    display: none
+
+.fa-bars
+    display: inline-block
+// Times verbergen
+
+.fa-times
+    display: none
+
+checkbox verbergen
+
+#haal-menu
+    display: none
+
+.menu-halen
+    float: right
+    font-size: 1.5em
+    padding: .3em 2rem .3em 5em 
+    cursor: pointer
+
+// Mediaquery
+@media screen and (min-width: 750px)
+    @import 'nav-hori'

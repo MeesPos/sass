@@ -1,9 +1,0 @@
-nav{
-    ul{
-        display: grid;
-        @include grid-t-c(1fr 1fr 1fr 1fr);
-    }
-    a{
-        text-align: center;
-    }
-}

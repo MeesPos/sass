@@ -1,56 +1,184 @@
-/* reset van het document */
-body {
-  margin: 0;
-}
-
-nav ul {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
   margin: 0;
   padding: 0;
 }
 
-/* de navigatie */
-nav {
-  background-color: #47a;
-}
-nav ul {
-  list-style-type: none;
-}
-nav a, nav label {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 0.5em 1em;
-}
-nav a:hover, nav label:hover {
-  text-decoration: none;
-}
-nav label {
-  text-align: right;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-@media screen and (min-width: 30em) {
-  nav ul {
-    display: grid;
-    -webkit-grid-template-colums: 1fr 1fr 1fr 1fr;
-    -moz-grid-template-colums: 1fr 1fr 1fr 1fr;
-    -ms-grid-template-colums: 1fr 1fr 1fr 1fr;
-    -o-grid-template-colums: 1fr 1fr 1fr 1fr;
-    grid-template-colums: 1fr 1fr 1fr 1fr;
-  }
-  nav a, nav label {
-    text-align: center;
-  }
+.logo {
+  background-color: #81D742;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  color: #3a6a16;
 }
-body {
-  font-family: sans-serif;
+
+.container {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.6s ease-in-out;
+  -o-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
 }
 
 main {
-  background-color: #aac4dd;
+  padding: 0 2em;
+}
+
+section {
+  color: #3a6a16;
+}
+section h2 {
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  /* Breakpoint desktop */
+  .container {
+    min-height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-rows: 1fr 2fr auto;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+    padding: 0 3em;
+  }
+  main .knop-houder {
+    border-bottom: 0;
+  }
+
+  section {
+    display: grid;
+    grid-template-rows: auto 1fr 6em;
+  }
+}
+nav {
+  background-color: #ddd;
+  position: absolute;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 5em 0.5em 2em;
+  border-bottom: 1px solid #fff;
+  color: #3a6a16;
+}
+nav a.actief {
+  border-bottom: 4px solid #FF652A;
+}
+
+#haal-menu:checked ~ .container {
+  left: 10em;
+}
+
+#haal-menu:checked ~ .menu-halen .fa-times {
+  display: inline-block;
+}
+
+#haal-menu:checked ~ .menu-halen .fa-bars {
+  display: none;
+}
+
+.fa-bars {
+  display: inline-block;
+}
+
+.fa-times {
+  display: none;
+}
+
+#haal-menu {
+  display: none;
+}
+
+.menu-halen {
+  float: right;
+  font-size: 1.5em;
+  padding: 0.3em 2rem 0.3em 5em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+  /* Naar een horizontaal menu bij een bredere viewport */
+  .menu-halen {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    float: right;
+    width: auto;
+    text-align: right;
+    font-size: 1.3em;
+  }
+  nav li {
+    display: inline-block;
+  }
+  nav a {
+    display: inline-block;
+    padding: 0.5em 2em 0.5em 2em;
+    border-bottom: 0;
+    background-color: #fff;
+  }
+  nav a:hover {
+    background-color: #ccc;
+  }
+
+  .container {
+    clear: both;
+  }
+}
+header {
+  background-color: #2859BC;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 4px solid #80a1e4;
+}
+header h1 {
+  font-weight: 100;
+}
+header p {
+  padding: 1em;
+}
+
+.knop {
+  background-color: #81D742;
+  color: #3a6a16;
+  font-size: 1.1em;
+  padding: 0.5em 2em;
+  cursor: pointer;
+}
+.knop:hover {
+  background-color: #3a6a16;
+  color: #fff;
+}
+.knop-houder {
+  text-align: center;
+  padding: 1em 0 1.5em;
+  border-bottom: 1px solid #3a6a16;
 }
 
 footer {
-  background-color: #47a;
+  background-color: #2859BC;
+  color: #fff;
+  padding: 1em 0;
+  border-bottom: 4px solid #80a1e4;
+}
+footer p {
+  padding: 2em 2em 0;
+}
+footer #validatie {
+  padding: 0 2em 2em;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

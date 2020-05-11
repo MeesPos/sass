@@ -1,7 +1,0 @@
-@mixin grid-t-c($waarde){
-    -webkit-grid-template-colums: $waarde;
-    -moz-grid-template-colums: $waarde;
-    -ms-grid-template-colums: $waarde;
-    -o-grid-template-colums: $waarde;
-    grid-template-colums: $waarde;
-}

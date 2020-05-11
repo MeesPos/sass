@@ -1,0 +1,7 @@
+// Mixin voor transition
+
+@mixin transition($eigenschap) {
+    -webkit-transition: $eigenschap;
+    -o-transition:      $eigenschap;
+    transition:         $eigenschap;
+}
